@@ -1,0 +1,12 @@
+body {
+  background: grey;
+}
+
+#grid {
+  display: -ms-grid;
+  display: grid;
+  width: 70vw;
+  height: 70vw;
+  background: blue;
+}
+/*# sourceMappingURL=style.css.map */
