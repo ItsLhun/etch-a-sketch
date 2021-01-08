@@ -1,20 +1,16 @@
 const gridContainer = document.querySelector("#grid");
 
-/*gridContainer.style.gridTemplateColumns = 
-gridContainer.style.gridTemplateRows = " 20px 30px";*/
-
 let gridSize = 50;
+gridContainer.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
+gridContainer.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
 
-for (let i = 0; i < gridSize; i++) {
-  for (let j = 0; j < gridSize; j++) {
+for (let i = 1; i <= gridSize + 1; i++) {
+  for (let j = 1; j <= gridSize + 1; j++) {
     let newDiv = document.createElement("div");
-    newDiv.style.color = "orange";
-    newDiv.style.background = "green";
-    newDiv.style.height = "1vw";
-    newDiv.style.width = "1vw";
-    newDiv.style.margin = "1px";
-    newDiv.style.display = "block";
-    newDiv.style.gridRow = i;
+    newDiv.style.background = "white";
+    newDiv.style.height = "1fr";
+    newDiv.style.width = "1fr";
+    newDiv.style.gridArea = `${j}/${i}`;
     gridContainer.appendChild(newDiv);
   }
 }

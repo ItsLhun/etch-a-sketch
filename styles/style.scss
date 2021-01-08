@@ -9,9 +9,13 @@ body {
   background: grey;
 }
 #grid {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   display: grid;
-  width: 70vw;
-  height: 70vw;
-
-  background: blue;
+  width: 45vw;
+  height: 45vw;
+  grid-gap: 1px;
+  background: black;
 }
