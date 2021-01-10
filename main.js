@@ -2,14 +2,12 @@ const gridContainer = document.querySelector("#grid");
 const resetButton = document.querySelector("#resetButton");
 resetButton.addEventListener("click", start);
 
+let sketchHovered = document.querySelector(".sketchHovered");
+
 const colorInput = document.querySelector("#colorInput");
-colorInput.addEventListener("click", function (){
-let sketchHovered = document.querySelector(".sketchHovered);
-  
-  background: #ed8818;
-}
-  background: #ed8818;
-}
+colorInput.addEventListener("click", function () {
+  sketchHovered.style.background = colorInput.value.toString;
+  console.log(colorInput.value);
 });
 
 let gridSize = 8;
