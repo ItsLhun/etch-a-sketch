@@ -52,7 +52,8 @@ body {
   height: 80vh;
   overflow: auto;
   padding: 10px;
-  margin-bottom: 5%;
+  margin-bottom: 4rem;
+  min-height: 500px;
 }
 
 .etchContainer {
@@ -116,8 +117,8 @@ body {
   display: grid;
   -ms-grid-columns: 2;
       grid-template-columns: 2;
-  -ms-grid-rows: 5;
-      grid-template-rows: 5;
+  -ms-grid-rows: 4;
+      grid-template-rows: 4;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -133,10 +134,57 @@ body {
 }
 
 .optionsContainer h2 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   grid-column: 0/2;
-  -ms-grid-row: 1;
-  grid-row: 1;
-  font-size: 4vmin;
+  grid-row: 0/1;
+  font-size: 1.5rem;
+}
+
+.optionsContainer .colorDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+.optionsContainer .colorDiv input {
+  margin-left: 10px;
+}
+
+.optionsContainer .sizeDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-grid-row: 3;
+  grid-row: 3;
+  grid-column: 0/1;
+}
+
+h3 {
+  font-size: 3.8vmin;
 }
 
 #resetButton {
@@ -148,13 +196,8 @@ body {
   margin-left: auto;
   width: 60%;
   height: 4vmin;
-  -ms-grid-row: 5;
-  grid-row: 5;
-}
-
-#sizeTitle {
-  -ms-grid-row: 2;
-  grid-row: 2;
+  -ms-grid-row: 4;
+  grid-row: 4;
 }
 
 #slider {
@@ -210,8 +253,8 @@ input[type="color"]::-webkit-color-swatch {
   height: 80vmin;
   width: 80vmin;
   min-width: 100px;
-  min-height: 100px;
-  grid-gap: 1px;
+  min-height: 300px;
+  grid-gap: 0px;
   background: black;
   cursor: crosshair;
 }
@@ -274,6 +317,9 @@ footer p a svg:hover {
     width: fit-content;
     height: 60vmin;
   }
+  h3 {
+    font-size: 2.8vmin;
+  }
 }
 
 @media (max-width: 710px) {
@@ -288,17 +334,55 @@ footer p a svg:hover {
     width: 65vmin;
   }
   .optionsContainer {
+    -ms-grid-rows: 2;
+        grid-template-rows: 2;
     width: 65vmin;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+    height: 16vmin;
+    margin-top: 5px;
     padding-left: 0;
     padding-right: 0;
     margin-left: 0;
     margin-right: 0;
   }
+  .optionsContainer .sizeDiv {
+    margin-right: auto;
+    margin-left: auto;
+    left: 0;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 2;
+    grid-column: 2;
+  }
+  .optionsContainer .colorDiv {
+    margin-right: auto;
+    margin-left: auto;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
   #slider {
+    margin: 5px;
     width: 60%;
+  }
+  #slider output {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 2;
+    grid-column: 2;
+  }
+  #sliderRange {
+    width: 19vw;
+  }
+  #resetButton {
+    margin-top: 5px;
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 2;
+    grid-column: 2;
   }
   .fullEtch {
     width: 85%;
@@ -320,16 +404,14 @@ footer p a svg:hover {
   }
   .optionsContainer {
     width: 75vmin;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
+    height: 16vmin;
     padding-left: 0;
     padding-right: 0;
     margin-left: 0;
     margin-right: 0;
   }
   .optionsContainer h2 {
-    font-size: 5vmin;
+    font-size: 4.5vmin;
   }
   .fullEtch {
     width: 85%;

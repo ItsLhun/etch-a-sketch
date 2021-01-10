@@ -5,9 +5,10 @@ resetButton.addEventListener("click", start);
 let sketchHovered = document.querySelector(".sketchHovered");
 
 const colorInput = document.querySelector("#colorInput");
-colorInput.addEventListener("click", function () {
-  sketchHovered.style.background = colorInput.value.toString;
-  console.log(colorInput.value);
+let selectedColor = colorInput.value;
+
+colorInput.addEventListener("input", function () {
+  selectedColor = colorInput.value;
 });
 
 let gridSize = 8;
@@ -30,14 +31,13 @@ function createGrid(inputGrid) {
   for (let i = 1; i <= inputGrid + 1; i++) {
     for (let j = 1; j <= inputGrid + 1; j++) {
       let newDiv = document.createElement("div");
-      //  newDiv.style.background = "white";
       newDiv.style.height = "1fr";
       newDiv.style.width = "1fr";
       newDiv.setAttribute("class", "sketch");
       newDiv.style.gridArea = `${j}/${i}`;
       gridContainer.appendChild(newDiv);
       newDiv.addEventListener("mouseenter", () => {
-        newDiv.setAttribute("class", "sketchHovered");
+        newDiv.style.background = selectedColor;
       });
     }
   }
