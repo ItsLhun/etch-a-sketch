@@ -269,6 +269,9 @@ footer {
     margin-left: 1fr;
     margin-right: 1fr;
   }
+  footer{
+    height: 1.2rem;
+  }
 }
 
 @include media("<=phoneXL") {

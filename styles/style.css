@@ -389,6 +389,9 @@ footer p a svg:hover {
     margin-left: 1fr;
     margin-right: 1fr;
   }
+  footer {
+    height: 1.2rem;
+  }
 }
 
 @media (max-width: 460px) {
